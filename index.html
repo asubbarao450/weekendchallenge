@@ -1,20 +1,70 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="style.css">
-  <title>Salary Calculator</title>
-</head>
-<body>
-  <header>
-    <h1>Salary Calculator</h1>
-  </header>
-  <main>
-    <h2>Add Employee</h2>
-    <h2>Employees</h2>
-  </main>
-  <footer>
-    <p>Total Monthly</p>
-  </footer>
-</body>
-</html>
+< <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <title>Salary Calculator</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Salary Calculator</h1>
+    </header>
+
+
+    <main>
+      
+      <h2>Employees</h2>
+
+      <section>
+        <h3>Add Employee</h3>
+        <form>
+          <input id="firstName" placeholder="First Name" type="text">
+          <input id="lastName" placeholder="Last Name" type="text">
+          <input id="ID" placeholder="ID" type="text">
+          <input id="Title" placeholder="Title" type="text">
+          <input id="Annual Salary" placeholder="Annual Salary" type="text">
+          <button onClick="handleSubmit(event)">Submit</button>
+        </form>
+        <div id="textOutput">
+        </div>
+      </section>
+
+      <section>
+        <h3>Employees</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>ID</th>
+              <th>Title</th>
+              <th>Annual Salary</th>
+              <th>             </th>
+            </tr>
+          </thead>
+          <tbody id="tableBody">
+            <!-- <tr>
+              <td>You probably got this!</td>
+              <td>Oscar</td>
+            </tr>
+            <tr>
+              <td>You definitely got this!</td>
+              <td>Elmo</td>
+            </tr>
+            <tr>
+              <td>Don't forget to delete these three hardcoded table rows!</td>
+              <td>Abby Cadabby</td>
+            </tr> -->
+          </tbody>
+        </table>
+      </section>
+    </main>
+    <footer>
+      <p>Total Monthly</p>
+    </footer>
+  </body>
+
+  </html>
