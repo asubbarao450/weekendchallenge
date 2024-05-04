@@ -31,13 +31,21 @@ main {
 }
 
 footer {
-  height: 8em;
+  height: 4em;
   background-color: #7a7a7a;
   text-align: right;
+  font-size: 2rem;
+}
+
+.overbudget {
+  height: 4em;
+  background-color: #ed0404;
+  text-align: right;
+  font-size: 2rem;
 }
 
 
-/* HEADER/FOOTER */
+/* HEADER */
 header {
   height: 10%;
   display: flex;
@@ -63,14 +71,13 @@ button {
   width: 75px;
 }
 
-/*button */
+/*buttons */
 #submitbutton {
 
   float: right;
 }
 
 /*changed the padding to change the button size*/
-
 #delete {
   padding: 1px;
 }

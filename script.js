@@ -37,14 +37,13 @@ function handleSubmit(event) {
         <td>${employee[1]}</td>
         <td>${employee[2]}</td>
         <td>${employee[3]}</td>
-        <td id >${employee[4]}</td>
+        <td >${employee[4]}</td>
         <td><button id="delete" onClick="deletex(event)">Delete</button></td>
         </tr>
         `;
 
     }
 
-    //querySelector worked but the getelementbyclassname didn't
 
 
     updateFooter();
@@ -58,12 +57,30 @@ function updateFooter() {
 
     //to be called upon removing or adding an employee 
     //posibily only when the annualsalary is not blank
-    let newFooter = document.querySelector('footer');
+    let newFooter = document.querySelector("footer")
+    
+//don't use getElementByClassName as it has caused error
+    console.log(newFooter);
+    if (totalEmployeeSalary > 240000) {
+        //change footer text to red
 
 
-    //console.log(ansalcol);
+        newFooter.classList.add('overbudget');
+        //newFooter.style.color = 'red';
+        newFooter.innerHTML = `
+        Total Monthly(Overbudget): 
+        ${totalEmployeeSalary / 12} `
 
-    newFooter.innerHTML = `${totalEmployeeSalary / 12}`;
+    }
+
+    else if (totalEmployeeSalary <= 240000) {
+
+        //newFooter.style.color = 'black';
+        newFooter.classList.remove('overbudget'); 
+
+        newFooter.innerHTML = `Total Monthly: ${totalEmployeeSalary / 12}`;
+
+    }
 
 }
 
@@ -81,7 +98,7 @@ function deletex(event) {
     //returns the annual salary of the employee that we were deleting
     //returns the adjacent table <td>
     let sAnnualsal = Number(event.target.parentElement.previousSibling.previousSibling.innerHTML);
-    
+
 
 
     totalEmployeeSalary -= sAnnualsal;
