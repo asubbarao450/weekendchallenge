@@ -58,9 +58,9 @@ function updateFooter() {
     //to be called upon removing or adding an employee 
     //posibily only when the annualsalary is not blank
     let newFooter = document.querySelector("footer")
-    
-//don't use getElementByClassName as it has caused error
-    console.log(newFooter);
+
+    //don't use getElementByClassName as it has caused error
+
     if (totalEmployeeSalary > 240000) {
         //change footer text to red
 
@@ -76,7 +76,7 @@ function updateFooter() {
     else if (totalEmployeeSalary <= 240000) {
 
         //newFooter.style.color = 'black';
-        newFooter.classList.remove('overbudget'); 
+        newFooter.classList.remove('overbudget');
 
         newFooter.innerHTML = `Total Monthly: ${totalEmployeeSalary / 12}`;
 
@@ -97,11 +97,12 @@ function deletex(event) {
 
     //returns the annual salary of the employee that we were deleting
     //returns the adjacent table <td>
-    let sAnnualsal = Number(event.target.parentElement.previousSibling.previousSibling.innerHTML);
+    let sAnnualsal = event.target.parentElement.previousSibling.previousSibling.innerHTML;
 
 
 
-    totalEmployeeSalary -= sAnnualsal;
+
+    totalEmployeeSalary -= Number(sAnnualsal);
 
     toDelete.remove();
 
