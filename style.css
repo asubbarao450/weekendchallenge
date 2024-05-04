@@ -63,10 +63,18 @@ button {
   width: 75px;
 }
 
+/*button */
 #submitbutton {
 
   float: right;
 }
+
+/*changed the padding to change the button size*/
+
+#delete {
+  padding: 1px;
+}
+
 
 /* TABLE */
 table {
