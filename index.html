@@ -21,14 +21,14 @@
       <section>
         <h3>Add Employee</h3>
         <form>
-          <input id="firstName" placeholder="First Name" type="text">
-          <input id="lastName" placeholder="Last Name" type="text">
-          <input id="ID" placeholder="ID" type="text">
-          <input id="Title" placeholder="Title" type="text">
-          <input id="Annual Salary" placeholder="Annual Salary" type="text">
+          <input data-testid="firstNameInput" id="firstNameInput" placeholder="First Name" type="text">
+          <input data-testid="lastNameInput" id="lastNameInput" placeholder="Last Name" type="text">
+          <input data-testid="idInput" id="idInput" placeholder="ID" type="text">
+          <input data-testid="titleInput" id="titleInput" placeholder="Title" type="text">
+          <input data-testid="annualSalaryInput" id="annualSalaryInput" placeholder="Annual Salary" type="text">
 
         </form>
-        <button id="submitbutton" onClick="handleSubmit(event)">Submit</button>
+        <button data-testid="submitButton" id="submitButton" onClick="handleSubmit(event)">Submit</button>
         <div id="textOutput">
         </div>
       </section>

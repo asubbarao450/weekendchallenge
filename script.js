@@ -8,13 +8,15 @@ function handleSubmit(event) {
     let employee = []
     if (employee[0] != "" || employee[1] != "" || employee[2] != "" || employee[3] != "" || employee[4] != "") {
 
-        employee.push(document.getElementById('firstName').value);
-        employee.push(document.getElementById('lastName').value);
-        employee.push(document.getElementById('ID').value);
-        employee.push(document.getElementById('Title').value);
-        employee.push(document.getElementById('Annual Salary').value);
+        employee.push(document.getElementById('firstNameInput').value);
+        employee.push(document.getElementById('lastNameInput').value);
+        employee.push(document.getElementById('idInput').value);
+        employee.push(document.getElementById('titleInput').value);
+        employee.push(document.getElementById('annualSalaryInput').value);
 
-
+        //resets the form after value is inputted
+        document.querySelector('form').reset()
+        
         //make sure to use Number function to 
         totalEmployeeSalary += Number(employee[4]);
 
@@ -65,7 +67,7 @@ function updateFooter() {
         //change footer text to red
 
 
-        newFooter.classList.add('overbudget');
+        newFooter.classList.add('over-budget');
         //newFooter.style.color = 'red';
         newFooter.innerHTML = `
         Total Monthly(Overbudget): 
@@ -76,7 +78,7 @@ function updateFooter() {
     else if (totalEmployeeSalary <= 240000) {
 
         //newFooter.style.color = 'black';
-        newFooter.classList.remove('overbudget');
+        newFooter.classList.remove('over-budget');
 
         newFooter.innerHTML = `Total Monthly: ${totalEmployeeSalary / 12}`;
 
